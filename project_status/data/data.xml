@@ -1,0 +1,36 @@
+<odoo>
+  <data noupdate="1">
+    <record id="project_status_new" model="project.status">
+      <field name="name">New</field>
+      <field name="description">New</field>
+    </record>
+    <record id="project_status_mob" model="project.status">
+      <field name="name">Mobilization</field>
+      <field name="description">Mobilization</field>
+    </record>
+    <record id="project_status_erection" model="project.status">
+      <field name="name">Erection</field>
+      <field name="description">Erection</field>
+    </record>
+    <record id="project_status_handover" model="project.status">
+      <field name="name">Handover</field>
+      <field name="description">Handover</field>
+    </record>
+    <record id="project_status_off_hire" model="project.status">
+      <field name="name">Off Hire</field>
+      <field name="description">Off Hire</field>
+    </record>
+    <record id="project_status_dismantling" model="project.status">
+      <field name="name">Dismantling</field>
+      <field name="description">Dismantling</field>
+    </record>
+    <record id="project_status_demobilization" model="project.status">
+      <field name="name">Demobilization</field>
+      <field name="description">Demobilization</field>
+    </record>
+    <record id="project_status_done" model="project.status">
+      <field name="name">Done</field>
+      <field name="description">Done</field>
+    </record>
+  </data>
+</odoo>
