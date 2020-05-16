@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <!-- Inherit Form View to Modify it -->
+       <record id="stock_picking_inherit_az" model="ir.ui.view">
+           <field name="name">stock.picking.form</field>
+           <field name="model">stock.picking</field>
+           <field name="inherit_id" ref="stock.view_picking_form"/>
+           <field name="arch" type="xml">
+
+               <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="after">
+                   <field name="po_line_product_desc"/>
+
+               </xpath>
+           </field>
+       </record>
+    </data>
+</odoo>
