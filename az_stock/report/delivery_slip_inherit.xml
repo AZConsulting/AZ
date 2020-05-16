@@ -46,7 +46,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table class="table table-sm mt48" t-if="o.state!='done'">
+                    <table class="table table-sm mt48">
                         <thead>
                             <tr>
                                 <th><strong>Description</strong></th>
@@ -73,11 +73,11 @@
                             </tr>
                         </tbody>
                     </table>
-                    <table class="table table-sm mt48" t-if="o.move_line_ids and o.state=='done'">
+                    <!--<table class="table table-sm mt48" t-if="o.move_line_ids and o.state=='done'">
                         <t t-set="has_serial_number" t-value="o.move_line_ids.mapped('lot_id')"/>
                         <thead>
                             <tr>
-                                <th><strong>Product</strong></th>
+                                <th><strong>Description</strong></th>
                                 <th name="lot_serial" t-if="has_serial_number" groups="stock.group_lot_on_delivery_slip">
                                     Lot/Serial Number
                                 </th>
@@ -87,7 +87,8 @@
                         <tbody>
                             <tr t-foreach="o.move_line_ids" t-as="move_line">
                                 <td>
-                                    <span t-field="move_line.product_id"/>
+                                    <span t-field="move_line.po_line_product_desc"/>
+                                    &lt;!&ndash;<span t-field="move_line.product_id"/>&ndash;&gt;
                                     <p t-if="o.picking_type_code == 'outgoing'">
                                         <span t-field="move_line.product_id.sudo().description_pickingout"/>
                                     </p>
@@ -107,7 +108,7 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>-->
                     <p>
                         <t t-if="o.backorder_ids and o.backorder_ids.filtered(lambda x: x.state not in ('done', 'cancel'))">
                             All items couldn't be shipped, the remaining ones will be shipped as soon as they become available.
@@ -115,7 +116,7 @@
                     </p>
                     <br/><br/>
                         <p><strong>Received By:_____________________</strong></p><br/>
-                        <p><strong>Signature:_____________________</strong></p><br/>
+                        <p><strong>Signature:_______________________</strong></p><br/>
                 </div>
             </t>
 

@@ -10,5 +10,5 @@ class StockMove(models.Model):
             if move.sale_line_id:
                 move.po_line_product_desc = move.sale_line_id.name
 
-    po_line_product_desc = fields.Char(string="Description",
+    po_line_product_desc = fields.Text(string="Description",
                                        compute="get_product_description")
