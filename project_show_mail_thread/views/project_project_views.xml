@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+      <record id="project_project_form_view" model="ir.ui.view">
+          <field name="name">project.project.formInherit</field>
+          <field name="model">project.project</field>
+          <field name="inherit_id" ref="project.edit_project"/>
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='message_follower_ids']" position="after">
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </xpath>
+          </field>
+      </record>
+  </data>
+</odoo>
